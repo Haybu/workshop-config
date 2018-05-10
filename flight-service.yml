@@ -2,3 +2,10 @@ server:
   servlet:
     context-path: /flights
   port: 8081
+
+---
+spring:
+  profiles: cloud
+
+server:
+  port: 8080
