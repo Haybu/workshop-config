@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-parameters: /demo
+    context-path: /demo
   port: ${PORT:8083}
 
 management:
