@@ -7,20 +7,7 @@ management:
     enabled-by-default: true
     web.enabled: true
     web.base-path: /admin
-    web.exposure.include: hystrix.stream
-  endpoint:
-    env.enabled: true
-    auditevents.enabled: true
-    beans.enabled: true
-    conditions.enabled: true
-    configprops.enabled: true
-    health.enabled: true
-    heapdump.enabled: true
-    info.enabled: true
-    logfile.enabled: true
-    mappings.enabled: true
-    loggers.enabled: true
-    metrics.enabled: true
+    web.exposure.include: '*'
   cloudfoundry:
     enabled: true
     skip-ssl-validation: true
