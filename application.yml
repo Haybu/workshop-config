@@ -57,9 +57,6 @@ eureka:
 #    serviceUrl:
 #      defaultZone: ${vcap.services.registry-service.credentials.uri}
 
-server:
-  port: 8080
-
 security:
   basic:
     enabled: false
