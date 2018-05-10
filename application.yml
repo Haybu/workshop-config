@@ -25,16 +25,23 @@ management:
     enabled: true
     skip-ssl-validation: true
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    healthcheck:
-      enabled: true
+
+eurka:
   instance:
-    hostname: localhost
     statusPageUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/info
     healthCheckUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/health
+
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#    healthcheck:
+#      enabled: true
+#  instance:
+#    hostname: localhost
+#    statusPageUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/info
+#    healthCheckUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/health
 
 ---
 spring:
@@ -46,9 +53,9 @@ spring:
 eureka:
   instance:
     hostname: ${vcap.application.uris[0]}
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.registry-service.credentials.uri}
+#  client:
+#    serviceUrl:
+#      defaultZone: ${vcap.services.registry-service.credentials.uri}
 
 server:
   port: 8080
