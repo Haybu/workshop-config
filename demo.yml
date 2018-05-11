@@ -1,9 +1,0 @@
-server:
-  servlet:
-    context-path: /demo
-  port: ${PORT:8083}
-
-management:
-  endpoints:
-    web:
-      base-path: /admin
