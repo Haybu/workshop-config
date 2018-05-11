@@ -33,10 +33,6 @@ eureka:
     statusPageUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/info
     healthCheckUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/health
 
-spring:
-  datasource:
-    type: org.apache.commons.dbcp2.BasicDataSource
-
 ---
 spring:
   profiles: cloud
